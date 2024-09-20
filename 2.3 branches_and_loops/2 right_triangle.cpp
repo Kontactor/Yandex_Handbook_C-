@@ -5,7 +5,7 @@ int main() {
 
 	std::cin >> a >> b >> c;
 
-	if ((a + b < c) || (b + c < a) || (a + c < b)) {
+	if ((a + b <= c) || (b + c <= a) || (a + c <= b)) {
 		std::cout << "UNDEFINED" << std::endl;
 	}
 	else if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)) {
