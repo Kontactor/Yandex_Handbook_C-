@@ -13,7 +13,9 @@ std::string CommonPrefix(const std::vector<std::string>& words) {
             prefix.clear();
             return prefix;
         }
-        prefix.resize(word.size());
+        if (prefix.size() > word.size()) {
+            prefix.resize(word.size());
+        }
         for (size_t i = 0; i != prefix.size() && i != word.size(); ++i) {
             if(prefix.at(i) != word.at(i)) {
                 prefix.resize(i);                
